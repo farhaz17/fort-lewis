@@ -1,0 +1,66 @@
+
+@mixin below-tablet{
+    @media only screen and (max-width: 768px){
+        @content;
+    }
+}
+
+@mixin below-phone{
+    @media only screen and (max-width: 414px){
+        @content;
+    }
+}
+
+@mixin bannertext {
+    text-align: center;
+    font-family: 'Alfa Slab One', cursive;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: $primary;
+    font-weight: 100;
+ }
+
+ @mixin button {
+    background-color: $primary;
+    color: $textcolor;
+    padding: 0.5rem 1rem;
+    font-weight: 900;
+    font-size: medium;
+    border: 2px solid transparent;
+ }
+
+ @mixin buttonhover {
+    border: 2px solid $textcolor;
+    color: $textcolor;
+    background: transparent;
+ }
+ @mixin titlefont {
+    margin-bottom: 3rem;
+    text-align: center;
+    font-family: 'Alfa Slab One', cursive;
+    font-weight: 100;
+    font-size: 250%;
+ }
+ @mixin hover {
+    color: orange;
+ }
+
+@mixin block-list($color,$padding){
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        li {
+            float: left;
+            a {
+                display: block;
+                color: $color;
+                text-align: center;
+                padding: 12px $padding;
+                text-decoration: none;
+            }
+        }
+    }
+}
